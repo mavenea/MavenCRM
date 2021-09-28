@@ -1,0 +1,25 @@
+name: 'run remote action at mavencrm-deploy'
+on:
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  notify:
+    name: 'remote action run'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Github REST API Call
+      env:
+        CI_TOKEN: ${{ secrets.WORKFLOW_ACTIONS }}
+        PARENT_REPO: mavenea/mavencrm-deploy
+        PARENT_BRANCH: main
+        WORKFLOW_ID: 11320764
+      run: |
+        curl -fL --retry 3 -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ env.CI_TOKEN }}" https://api.github.com/repos/${{ env.PARENT_REPO }}/actions/workflows/${{ env.WORKFLOW_ID }}/dispatches -d '{"ref":"${{ env.PARENT_BRANCH }}"}'

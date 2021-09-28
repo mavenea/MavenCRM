@@ -1,0 +1,141 @@
+### VSCode ###
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+# Local History for Visual Studio Code
+.history/
+### phpStorm / IDEA ###
+.idea
+.idea/*
+.env
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# MACOS Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# ************ PERSONAL FILES ***************
+my_notes
+# ************ VTENEXT PROJECT SPECIFIC ***************
+
+### Temp Files starting with _###
+**/_*
+
+### composer modules only on root###
+/vendor/
+
+### nodejs modules###
+node_modules
+
+### cache dirs ###
+/web/cache/*
+!/web/cache/index.html
+!/web/cache/processmaker.tmp
+!/web/cache/*/index.html
+!/web/cache/*/.htaccess
+### smartoptimizer cache dirs ###
+/web/smartoptimizer/cache/*
+!/web/smartoptimizer/cache/index.html
+/web/Smarty/cache/*
+!/web/Smarty/cache/index.html
+
+### other cache dirs ###
+.sass-cache
+
+### storage dirs ###
+/web/storage
+!/web/storage/custom_modules/index.html
+!/web/storage/images_uploaded/index.html
+!/web/storage/logo/*
+!/web/storage/signatures/index.html
+!/web/storage/touch_uploads/index.html
+!/web/storage/.htaccess
+!/web/storage/get.php
+!/web/storage/index.html
+!/web/storage/vtenext.txt
+
+### logs ###
+/web/logs/*
+!/web/logs/.htaccess
+/web/.htaccess
+# NOTE: deleted files during installation should all be assumed unchanged using
+# for i in `git status | grep deleted | awk '{print $2}'`; do git update-index --assume-unchanged $i; done
+#web/cache/vtlib/HTML/README.txt
+#web/htaccess.txt
+#
+#commited /web/htaccess.txt file will remove the file only from dev branch. It should be tracked in version control but not deleted from master branch.
+
+# THOSE FILES ARE CREATED DURING INSTALLATION AND/OR NORMAL OPERATIONS
+# THEY SHOULD NOT GO IN VERSION CONTROL TO AVOID PUSHING TO REMOTES
+# ONCE COMPLETED DEBUGGING OF INSTALL MODULE REMEMBER TO UNCOMMENT THOSE BEFORE MERGING WITH OTHER BRANCHES
+
+# if you want to roll back to a state prior to install i.e. clean original source state - delete the folders below
+
+# RENAMED INSTALLATION FOLDER DURING INSTALLATION AND CREATED FILE
+/web/*install/
+/web/*install.php.txt
+
+# installed manifest and schema - those are created based on manifest.xml for each module
+/web/modules/*/manifest.xml.installed
+/web/modules/*/schema.xml
+
+# Optional Modules - created during installation if user selected
+
+/web/modules/CustomerPortal
+/web/modules/RecycleBin
+
+/web/Smarty/templates/modules/CustomerPortal
+/web/Smarty/templates/modules/RecycleBin
+
+# created during installation - looks like it is a core module automatically created folder during install
+/web/modules/ModLightProdAttr
+
+
+# specific files are created during installation
+/web/modules/Campaigns/ProcessBounces.config.php
+/web/modules/SLA/SLA.config.php
+
+# User permissions cache files created during installation
+/web/user_privileges/sharing_privileges_1.php
+/web/user_privileges/user_privileges_1.php
+
+
+# CACHE folder created during installation
+/web/cache/sys/cacheResources.json
+/web/cache/sys/vteCacheHV.json
+/web/cache/vtlib/HTML/*.ser
+
+
+# Smarty tempalte compilation folder files - generated automatially during operation
+/web/Smarty/templates_c/*.php
+
+# development configuration
+/web/include/utils/VTEProperties_dev.php
+
+# exclude node-red from version control except settings
+/node-red/
+!/node-red/settings.js
+!/node-red/package.json
+

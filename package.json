@@ -1,0 +1,31 @@
+{
+  "name": "mavencrm-nodered",
+  "version": "0.0.1",
+  "description": "mavencrm integrations and orchestration using node-red",
+  "scripts": {
+    "start": "node node_modules/node-red/red.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavenea/mavencrm.git"
+  },
+  "keywords": [
+    "node-red",
+    "mavencrm"
+  ],
+  "author": "Islam El'ewady",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mavenea/mavencrm/issues"
+  },
+  "homepage": "https://github.com/mavenea/mavencrm#readme",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@meowwolf/node-red-contrib-amqp": "^2.3.1",
+    "node-red": "^2.0.5",
+    "node-red-contrib-graphql-server": "^0.2.1"
+  }
+}

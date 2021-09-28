@@ -1,0 +1,43 @@
+{
+    "name": "mavenea/mavencrm",
+    "type": "project",
+    "description": "Open Source CRM + BPM solution based on vtenext for the complete management of leads, contacts, customers and more",
+    "keywords": ["mavencrm","vte", "vtenext", "crm", "bpm", "bpmn"],
+    "homepage": "https://www.mavenea.tech/",
+    "config": {
+		"optimize-autoloader": true
+	},
+    "require": {
+        "php": "~7.4",
+        "ext-curl": "*",
+        "ext-imap": "*",
+        "ext-xml": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-bcmath": "*",
+        "ext-mbstring": "*",
+        "ext-zip": "*",
+        "ext-imagick": "*",
+        "ext-apcu": "*",
+        "ext-fileinfo": "*",
+        "ext-memcached": "*",
+        "ext-mysqli": "*",
+        "zendframework/zend-http": "2.2.*",
+        "zendframework/zend-mail": "2.2.*",
+        "php-amqplib/php-amqplib": "2.*",
+        "phpoffice/phpspreadsheet": "1.8.*",
+        "ezyang/htmlpurifier": "4.*",
+        "smarty/smarty": "3.*",
+        "phpmailer/phpmailer": "6.*",
+        "league/iso3166": "2.*",
+        "guzzlehttp/guzzle": "6.*",
+        "stevenmaguire/oauth2-microsoft": "2.*",
+        "league/oauth2-client": "^2.6"
+    },
+    "suggest": {
+		"ext-imagick": "To view tiff attachment in messages",
+		"ext-apcu": "To speed up caching",
+		"ext-memcached": "To speed up caching",
+        "ext-igbinary": "igbinary serializer for memcached faster serializer. NA on heroku"
+    }
+}
